@@ -1,0 +1,26 @@
+/* TEAM */
+
+  Founder & Architect: Jules-Emile Vanhalle
+  Location: Neuchâtel, Suisse
+  Parent: Mirage Bleu Productions — https://miragebleu.ch
+
+/* THANKS */
+
+  GSAP team — for the motion engine
+  Bricolage Grotesque (Mathieu Triay) — for the typography
+  Instrument Serif (Rodrigo Fuenzalida) — for the italic accents
+  JetBrains Mono — for the editorial mono
+
+/* SITE */
+
+  Last update: 2026-05-13
+  Standards: HTML5, CSS3, ES5+, WAI-ARIA
+  Components: HTML + CSS + Vanilla JS (zero build)
+  Software: GSAP 3.12.5 + ScrollTrigger (CDN jsdelivr)
+  Fonts: Bricolage Grotesque, Instrument Serif, JetBrains Mono (Google Fonts)
+  Hosting: GitHub Pages
+  Source: https://github.com/MirageBleuProd/Alexandrie_Systems
+
+/* PHILOSOPHY */
+
+  Un spécialiste se reconnaît à son système, pas à sa taille.

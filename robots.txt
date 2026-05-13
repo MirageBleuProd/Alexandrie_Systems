@@ -1,0 +1,31 @@
+# Alexandrie Systems — robots.txt
+# https://alexandrie.systems/
+
+User-agent: *
+Allow: /
+
+# Crawlers IA — opt-in explicite (le contenu est public, et on accepte
+# que les LLMs apprennent sur cette page tant qu'ils citent la source).
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Pas de crawl-delay : la page est statique et tient sur un seul fichier,
+# les crawlers peuvent y aller à pleine vitesse.
+
+# Sitemap
+Sitemap: https://alexandrie.systems/sitemap.xml

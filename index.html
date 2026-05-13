@@ -7,16 +7,50 @@
 <meta name="description" content="Architecture de systèmes sur mesure pour les PME suisses qui refusent la dispersion. Audit, conception, déploiement et transmission d'un Backoffice propriétaire — sans SaaS, sans dépendance.">
 <meta name="author" content="Alexandrie Systems">
 <meta name="theme-color" content="#f4f0e8">
-<link rel="canonical" href="https://alexandrie.systems">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='36.5,5 46.5,5 18.5,95 8.5,95' fill='%230a0a0a'/%3E%3Cpolygon points='53,5 64,5 92,95 81,95' fill='%237326BB'/%3E%3C/svg%3E">
+<meta name="color-scheme" content="light dark">
+<link type="text/plain" rel="author" href="/humans.txt">
+<meta name="format-detection" content="telephone=no">
+
+<!-- SEO crawl directives -->
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="googlebot" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="bingbot" content="index,follow">
+
+<!-- Geo / language targeting -->
+<meta name="geo.region" content="CH-NE">
+<meta name="geo.placename" content="Neuchâtel, Suisse">
+<meta name="geo.position" content="46.9925;6.9314">
+<meta name="ICBM" content="46.9925, 6.9314">
+<meta name="language" content="fr-CH">
+<meta http-equiv="content-language" content="fr-CH">
+<meta name="distribution" content="global">
+<meta name="rating" content="general">
+
+<!-- Keywords (ignoré par Google, lu par Bing/Yandex/Qwant) -->
+<meta name="keywords" content="architecture systèmes PME suisse, backoffice sur mesure, conseil transition numérique, transition IA, alternative SaaS, système propriétaire, Neuchâtel, audit infrastructure, ERP sur mesure, CRM sur mesure, souveraineté numérique">
+
+<!-- Canonical + alternates -->
+<link rel="canonical" href="https://alexandrie.systems/">
+<link rel="alternate" hreflang="fr" href="https://alexandrie.systems/">
+<link rel="alternate" hreflang="fr-CH" href="https://alexandrie.systems/">
+<link rel="alternate" hreflang="x-default" href="https://alexandrie.systems/">
+
+<!-- Sitemap discovery -->
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+<!-- Icon + apple-touch -->
+<link rel="icon" type="image/svg+xml" href="/assets/img/alexandrie-systems-mark.svg">
+<link rel="alternate icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='36.5,5 46.5,5 18.5,95 8.5,95' fill='%230a0a0a'/%3E%3Cpolygon points='53,5 64,5 92,95 81,95' fill='%237326BB'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="/assets/img/alexandrie-systems-mark.svg">
 
 <!-- Open Graph / LinkedIn / Slack / WhatsApp / Discord -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Alexandrie Systems">
-<meta property="og:locale" content="fr_FR">
+<meta property="og:locale" content="fr_CH">
+<meta property="og:locale:alternate" content="fr_FR">
 <meta property="og:title" content="Alexandrie Systems — Architecture · Conseil · Transition IA">
 <meta property="og:description" content="Des systèmes sur mesure pour les PME suisses qui refusent la dispersion. Audit, architecture, déploiement, transmission — sans SaaS, sans dépendance.">
-<meta property="og:url" content="https://alexandrie.systems">
+<meta property="og:url" content="https://alexandrie.systems/">
 <meta property="og:image" content="https://alexandrie.systems/assets/img/alexandrie-systems-og.png">
 <meta property="og:image:secure_url" content="https://alexandrie.systems/assets/img/alexandrie-systems-og.png">
 <meta property="og:image:type" content="image/png">
@@ -31,22 +65,216 @@
 <meta name="twitter:image" content="https://alexandrie.systems/assets/img/alexandrie-systems-og.png">
 <meta name="twitter:image:alt" content="Alexandrie Systems — Architecture · Conseil · Transition IA">
 
-<!-- Structured data (JSON-LD : Organization) -->
+<!-- Structured data : graphe schema.org complet (Organization + Person + WebSite + WebPage + OfferCatalog + 4 Services + FAQPage) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Alexandrie Systems",
-  "description": "Architecture de systèmes sur mesure pour les PME suisses qui refusent la dispersion. Audit, conception, déploiement et transmission d'un Backoffice propriétaire — sans SaaS, sans dépendance.",
-  "url": "https://alexandrie.systems",
-  "logo": "https://alexandrie.systems/assets/img/alexandrie-systems-mark.svg",
-  "image": "https://alexandrie.systems/assets/img/alexandrie-systems-og.png",
-  "areaServed": { "@type": "Country", "name": "Switzerland" },
-  "serviceType": ["Architecture de systèmes", "Conseil en transition numérique", "Intégration IA pour PME"]
+  "@graph": [
+    {
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": "https://alexandrie.systems/#organization",
+      "name": "Alexandrie Systems",
+      "alternateName": "Alexandrie",
+      "description": "Architecture de systèmes sur mesure pour les PME suisses qui refusent la dispersion. Audit, conception, déploiement et transmission d'un Backoffice propriétaire — sans SaaS, sans dépendance.",
+      "url": "https://alexandrie.systems/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://alexandrie.systems/assets/img/alexandrie-systems-mark.svg",
+        "width": 200,
+        "height": 200
+      },
+      "image": "https://alexandrie.systems/assets/img/alexandrie-systems-og.png",
+      "email": "contact@miragebleu.ch",
+      "foundingDate": "2024",
+      "founder": { "@id": "https://alexandrie.systems/#founder" },
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Mirage Bleu Productions",
+        "url": "https://miragebleu.ch"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Neuchâtel",
+        "addressRegion": "NE",
+        "addressCountry": "CH"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.9925,
+        "longitude": 6.9314
+      },
+      "areaServed": [
+        { "@type": "Country", "name": "Switzerland" },
+        { "@type": "Country", "name": "France" }
+      ],
+      "knowsLanguage": ["fr", "fr-CH", "en"],
+      "priceRange": "CHF 5'000 – CHF 120'000",
+      "sameAs": [
+        "https://miragebleu.ch",
+        "https://github.com/MirageBleuProd"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "contact@miragebleu.ch",
+        "areaServed": "CH",
+        "availableLanguage": ["fr", "en"]
+      },
+      "hasOfferCatalog": { "@id": "https://alexandrie.systems/#offers" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://alexandrie.systems/#founder",
+      "name": "Jules-Emile Vanhalle",
+      "jobTitle": "Fondateur, Architecte de systèmes",
+      "worksFor": { "@id": "https://alexandrie.systems/#organization" },
+      "knowsAbout": [
+        "Architecture logicielle",
+        "Conseil en transition numérique",
+        "Intégration IA",
+        "Bases de données relationnelles",
+        "Souveraineté numérique",
+        "Production audiovisuelle"
+      ],
+      "nationality": { "@type": "Country", "name": "Switzerland" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://alexandrie.systems/#website",
+      "url": "https://alexandrie.systems/",
+      "name": "Alexandrie Systems",
+      "description": "Architecture de systèmes sur mesure pour les PME suisses qui refusent la dispersion.",
+      "publisher": { "@id": "https://alexandrie.systems/#organization" },
+      "inLanguage": "fr-CH"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://alexandrie.systems/#webpage",
+      "url": "https://alexandrie.systems/",
+      "name": "Alexandrie Systems — Architecture · Conseil · Transition IA",
+      "isPartOf": { "@id": "https://alexandrie.systems/#website" },
+      "about": { "@id": "https://alexandrie.systems/#organization" },
+      "primaryImageOfPage": "https://alexandrie.systems/assets/img/alexandrie-systems-og.png",
+      "inLanguage": "fr-CH",
+      "description": "Architecture de systèmes sur mesure pour les PME suisses qui refusent la dispersion."
+    },
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://alexandrie.systems/#offers",
+      "name": "Services Alexandrie Systems",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Audit d'infrastructure numérique",
+            "description": "Cartographie chiffrée de votre infrastructure existante, identification des risques de dispersion, recommandations actionnables.",
+            "serviceType": "Audit",
+            "provider": { "@id": "https://alexandrie.systems/#organization" },
+            "areaServed": "CH"
+          },
+          "priceCurrency": "CHF",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 5000,
+            "maxPrice": 9000,
+            "priceCurrency": "CHF"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Architecture de système sur mesure",
+            "description": "Conception d'un Backoffice propriétaire adapté à votre métier, sans SaaS ni dépendance fournisseur.",
+            "serviceType": "Architecture",
+            "provider": { "@id": "https://alexandrie.systems/#organization" }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Construction et déploiement",
+            "description": "Développement, intégration et mise en production de votre système Alexandrie en 3 à 6 mois.",
+            "serviceType": "Développement",
+            "provider": { "@id": "https://alexandrie.systems/#organization" }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Transmission et formation",
+            "description": "Documentation complète, formation de votre équipe interne, transmission de propriété du code et des données.",
+            "serviceType": "Transmission",
+            "provider": { "@id": "https://alexandrie.systems/#organization" }
+          },
+          "priceCurrency": "CHF",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 40000,
+            "maxPrice": 120000,
+            "priceCurrency": "CHF"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://alexandrie.systems/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Combien ça coûte ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un audit initial : 5 000 à 9 000 CHF, livrable en quatre semaines, avec une carte chiffrée de votre infrastructure et son coût annuel actuel. Un mandat complet d'architecture et de déploiement : de 40 000 à 120 000 CHF selon la taille de l'organisation et le périmètre. Aucun abonnement, aucune licence : vous achetez un système, pas un service."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps ça prend ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un mandat type s'étale sur trois à six mois, jamais plus. La méthode est calibrée pour qu'à chaque étape — cartographie, architecture, construction, transmission — vous puissiez décider de continuer ou d'arrêter. À la fin du sixième mois, votre système tourne, vos données sont migrées, vos abonnements résiliés."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Et si je veux partir ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le système vous appartient dès le premier jour : code, base de données, infrastructure, conventions documentées. Vous pouvez nous remercier à tout moment et le reprendre en main, ou confier sa maintenance à n'importe quel développeur compétent. Pas de format propriétaire, pas de SaaS qui ferme dans cinq ans, pas de dépendance à un fournisseur — c'est le contrat de base."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vous travaillez pour quelle taille d'entreprise ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PME suisses de 5 à 80 collaborateurs, principalement dans les secteurs où la mémoire d'entreprise est un actif stratégique : conseil, ingénierie, production audiovisuelle, services techniques, cabinets juridiques. En-dessous de 5 personnes, un Backoffice complet est rarement justifié — on préférera vous orienter vers un audit léger. Au-dessus de 80, on collabore avec votre DSI."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il après la livraison ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rien — et c'est le but. À la fin de la mission, vous avez un système qui tourne seul, une équipe formée à le faire évoluer, une documentation complète. C'est ce qui sépare un Backoffice Alexandrie d'une intégration SaaS classique : à la fin, on s'en va. Si vous souhaitez un accompagnement ponctuel après la livraison (nouveau module, audit annuel, formation d'un nouvel arrivant), c'est possible — mais facturé au temps passé, jamais en abonnement."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
+
+<!-- Performance hints : préconnexions critiques -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{

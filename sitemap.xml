@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://alexandrie.systems/</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alexandrie.systems/"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://alexandrie.systems/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandrie.systems/"/>
+    <image:image>
+      <image:loc>https://alexandrie.systems/assets/img/alexandrie-systems-og.png</image:loc>
+      <image:title>Alexandrie Systems — Architecture · Conseil · Transition IA</image:title>
+      <image:caption>Des systèmes pour les organisations qui refusent la dispersion.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexandrie.systems/assets/img/alexandrie-systems-logo.svg</image:loc>
+      <image:title>Logo Alexandrie Systems</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexandrie.systems/assets/img/alexandrie-systems-mark.svg</image:loc>
+      <image:title>Mark Alexandrie Systems</image:title>
+    </image:image>
+  </url>
+</urlset>
