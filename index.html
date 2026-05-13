@@ -388,7 +388,10 @@ body{
   gap:4px;
 }
 .prologue-mark{
-  width:auto;height:.72em;             /* cap-height ratio de Bricolage Grotesque 700 */
+  width:auto;height:.674em;            /* CAP-HEIGHT EXACT de Bricolage Grotesque 700,
+                                          mesure via Canvas API : actualBoundingBoxAscent
+                                          d un 'S' a 34px font-size = 22.906px = 0.6737em.
+                                          NB : 0.717 etait une estimation theorique fausse. */
   overflow:visible;flex-shrink:0;
   /* margin-bottom calibre empiriquement via preview_eval : descent + half-leading
      du line-box (= 1.92px @ 34px font-size, soit ~0.057em). Total 0.26em raise le mark
