@@ -323,7 +323,7 @@ body{
 }
 .nav.is-scrolled .nav-inner{padding:14px 32px}
 .brand{
-  display:flex;align-items:baseline;gap:10px;
+  display:flex;align-items:center;gap:10px;
   font-family:'Bricolage Grotesque',sans-serif;font-weight:700;
   font-size:22px;letter-spacing:-.03em;color:var(--ink);
   text-decoration:none;transition:font-size .25s ease;
@@ -331,16 +331,16 @@ body{
 .nav.is-scrolled .brand{font-size:19px}
 .brand-letter-wrap{
   display:inline-block;
-  width:.625em;
-  height:.674em;
+  width:.48em;
+  height:.72em;
   position:relative;
   vertical-align:baseline;
   margin-right:.02em;
 }
 .brand-letter{
   position:absolute;
-  bottom:0;left:0;
-  height:.674em;
+  bottom:-.02em;left:0;
+  height:1em;
   width:auto;
   color:var(--ink);
 }
@@ -389,17 +389,12 @@ body{
   overflow:visible;       /* pour les transforms scaleY(0) qui depassent le viewBox */
   fill:var(--ink);
 }
-/* transform-box:fill-box -> transform-origin / transforms refer to chaque element
-   son propre bbox (pas le SVG canvas). 50% 100% = bottom-center du polygon = foot of A. */
 .prologue-mark-left,.prologue-mark-right{
-  transform-box:fill-box;
-  transform-origin:50% 100%;
+  transform-origin:50% 95px;     /* foot of A (en viewBox units), pour scaleY animation */
   transform:scaleY(0);
 }
 .prologue-wordmark{
-  transform-box:fill-box;
-  transform-origin:0 0;
-  transform:translateY(110%);     /* 110% de la hauteur du wordmark = cache sous la baseline */
+  transform:translateY(110px);   /* pre-anim : wordmark cache sous la baseline (en viewBox units) */
 }
 .prologue-tagline{
   margin-top:42px;
@@ -1868,7 +1863,7 @@ body{
     <div class="eyebrow" data-reveal><span class="eyebrow-dot"></span>Architecture de systèmes · Conseil · Transition IA</div>
 
     <h1 data-motion="text" data-prologue-wait="1">
-      <span class="br">Systèmes,</span>
+      <span class="br">Architecture,</span>
       <span class="br">mémoire,</span>
       <span class="br v">continuité.</span>
     </h1>
