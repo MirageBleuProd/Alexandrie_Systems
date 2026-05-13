@@ -379,19 +379,21 @@ body{
   display:flex;align-items:center;justify-content:center;flex-direction:column;
   pointer-events:none;will-change:transform;
 }
+/* Approche v4 : inline-flex + align-items:flex-end + margin-bottom pour pousser
+   le mark depuis la descent-line vers la baseline. Plus de baseline ambigue. */
 .prologue-stage{
-  display:inline-block;white-space:nowrap;
+  display:inline-flex;align-items:flex-end;
+  white-space:nowrap;
   font-size:34px;line-height:1;
+  gap:4px;
 }
-/* Mark + word en inline-block avec vertical-align:baseline pour alignement font-metric exact.
-   Flex + align-items:baseline ne fonctionne pas de maniere fiable sur un SVG (Chromium traite
-   la baseline d'un replaced-element ambigument). En inline context + vertical-align:baseline,
-   le bas du SVG colle exactement a la baseline du texte. */
 .prologue-mark{
-  display:inline-block;vertical-align:baseline;
-  width:auto;height:.7em;  /* fallback : 0.7em ≈ cap-height ratio approximatif */
-  height:1cap;             /* modern : cap-height exact du font Bricolage Grotesque 700 */
-  overflow:visible;margin-right:3px;
+  width:auto;height:.72em;             /* cap-height ratio de Bricolage Grotesque 700 */
+  overflow:visible;flex-shrink:0;
+  /* margin-bottom = descent ratio. Avec line-height:1, le bottom du flex container
+     est sur la descent-line. On remonte le mark de cette distance pour que son bas
+     atterrisse sur la baseline. Descent ratio Bricolage ≈ 0.20em. */
+  margin-bottom:.2em;
 }
 .prologue-mark-left,.prologue-mark-right{
   transform-origin:50% 100%;
@@ -414,9 +416,14 @@ body{
   opacity:0;will-change:opacity;
 }
 @media (max-width:540px){
-  .prologue-stage{font-size:24px}  /* mark hérite automatiquement → height = 1cap @ 24px ≈ 17px */
+  .prologue-stage{font-size:24px;gap:3px}
   .prologue-word-inner{font-size:24px}
   .prologue-tagline{font-size:9.5px;margin-top:32px;letter-spacing:.18em;padding:0 24px;text-align:center;line-height:1.6}
+}
+@media (max-width:380px){
+  /* Très petits écrans : réduire encore le wordmark pour éviter le wrap "lexandrie" + "Systems" */
+  .prologue-stage{font-size:20px}
+  .prologue-word-inner{font-size:20px}
 }
 
 /* Scroll cue subtil en bas du hero */
