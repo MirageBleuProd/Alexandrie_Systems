@@ -1,6 +1,6 @@
 # Alexandrie Systems
 
-Landing page autonome — [alexandrie.ch](https://alexandrie.ch) (à venir).
+Landing page autonome — [alexandrie.systems](https://alexandrie.systems) (à venir).
 
 **Architecture · Conseil · Transition IA** pour les PME suisses qui refusent la dispersion.
 
@@ -54,12 +54,12 @@ Pour GitHub Pages :
 ```bash
 # Settings > Pages > Branch: main, Folder: / (root)
 # URL: https://miragebleuprod.github.io/Alexandrie_Systems/
-# Domaine custom : alexandrie.ch via CNAME
+# Domaine custom : alexandrie.systems via CNAME
 ```
 
 ## Historique
 
-Cette page a été développée incrémentalement en mai 2026 sous le repo `Backoffice_MirageBleu` (route `/alex`), puis extraite en projet standalone pour devenir le site officiel `alexandrie.ch`.
+Cette page a été développée incrémentalement en mai 2026 sous le repo `Backoffice_MirageBleu` (route `/alex`), puis extraite en projet standalone pour devenir le site officiel `alexandrie.systems`.
 
 5 phases de motion design (audace 8/10) :
 - **Phase 1** — motion foundation (GSAP + 4 helpers data-motion API)
