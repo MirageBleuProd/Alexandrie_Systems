@@ -390,10 +390,10 @@ body{
 .prologue-mark{
   width:auto;height:.72em;             /* cap-height ratio de Bricolage Grotesque 700 */
   overflow:visible;flex-shrink:0;
-  /* margin-bottom = descent ratio. Avec line-height:1, le bottom du flex container
-     est sur la descent-line. On remonte le mark de cette distance pour que son bas
-     atterrisse sur la baseline. Descent ratio Bricolage ≈ 0.20em. */
-  margin-bottom:.2em;
+  /* margin-bottom calibre empiriquement via preview_eval : descent + half-leading
+     du line-box (= 1.92px @ 34px font-size, soit ~0.057em). Total 0.26em raise le mark
+     pour que son bas colle exactement a la text baseline et son pic colle au cap-line. */
+  margin-bottom:.26em;
 }
 .prologue-mark-left,.prologue-mark-right{
   transform-origin:50% 100%;
