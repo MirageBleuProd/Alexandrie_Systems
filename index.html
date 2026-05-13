@@ -390,8 +390,7 @@ body{
   fill:var(--ink);
 }
 .prologue-mark-left,.prologue-mark-right{
-  transform-origin:50% 95px;     /* foot of A (en viewBox units), pour scaleY animation */
-  transform:scaleY(0);
+  /* init state geré par GSAP (gsap.fromTo) — pas de transform CSS pour éviter conflit GSAP/SVG */
 }
 .prologue-wordmark{
   transform:translateY(110px);   /* pre-anim : wordmark cache sous la baseline (en viewBox units) */
@@ -2275,6 +2274,11 @@ body{
     var wordmark = prologue.querySelector('.prologue-wordmark');
     var tagline = prologue.querySelector('.prologue-tagline');
     var scrollCue = document.getElementById('mb-scroll-cue');
+
+    /* Init state via gsap.set + svgOrigin = pivot en coords viewBox (SVG-safe).
+       Pied gauche du A x≈27.5 (centre polygon 8.5→46.5), pied droit x≈72.5, y=95. */
+    gsap.set(markL, { scaleY: 0, svgOrigin: '27.5 95' });
+    gsap.set(markR, { scaleY: 0, svgOrigin: '72.5 95' });
 
     var tl = gsap.timeline();
     tl.to(markL, { scaleY: 1, duration: 0.55, ease: 'expo.out' }, 0)
