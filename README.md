@@ -40,8 +40,8 @@ Site statique HTML + CSS + JS vanilla, zéro build.
 4. **Démo interactive** — constellation chronométrée : 3 mandats fictifs, jusqu'à 23 artefacts révélés en 3 s
 5. **Interventions** — 4 portes d'entrée : Cartographie, Construction, Transition IA, Transmission
 6. **Pour qui** — 3 profils de PME
-7. **Méthode** — 4 axiomes (Locality, Readability, Persistence, Traceability)
-8. **Étude de cas** — Mirage Bleu : chiffres clés, maquette du Backoffice, 4 pôles
+7. **Méthode** — 4 axiomes (Ownership, Readability, Persistence, Traceability)
+8. **Étude de cas** — Mirage Bleu : chiffres clés, maquette du Backoffice, 8 pôles
 9. **Manifeste** — citation §05
 10. **FAQ** — 5 questions (prix, durée, réversibilité, taille, après-livraison)
 11. **Journal** — article à la une

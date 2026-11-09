@@ -1760,8 +1760,11 @@ body{
   .contact{padding:88px 18px 64px}
   .footer{padding:32px 18px 24px}
 
-  /* Poles : 2 → 1 col sous 480 (cards très petites sinon) */
-  .poles{grid-template-columns:1fr !important}
+  /* Poles : 8 cartes, on garde 2 colonnes en version compacte */
+  .poles{grid-template-columns:repeat(2,1fr) !important}
+  .pole{padding:16px 14px}
+  .pole-tag{margin-bottom:10px}
+  .pole-name{font-size:17px}
   .studio-stats{grid-template-columns:repeat(2,1fr) !important;gap:14px}
   .ss-num{font-size:32px}
 
@@ -2102,7 +2105,7 @@ body{
         <a href="#case" class="trust-proof">
           <span class="trust-proof-logo"><img src="/assets/img/logo.svg" alt="Mirage Bleu" width="112" height="20"></span>
           <span class="trust-proof-text">
-            <span class="trust-proof-meta">Studio audiovisuel · 4 pôles d'activité</span>
+            <span class="trust-proof-meta">Studio audiovisuel · 8 pôles d'activité</span>
             <span class="trust-proof-claim">Quinze SaaS remplacés par un seul système.</span>
             <span class="trust-proof-link">Lire l'étude de cas <span aria-hidden="true">→</span></span>
           </span>
@@ -3019,23 +3022,23 @@ if (document.readyState === 'loading') {
     <div class="ax-grid">
       <div class="ax">
         <div class="ax-num">— 01</div>
-        <div class="ax-en">Locality.</div>
-        <div class="ax-fr">Tout réside localement. La propriété de la donnée précède la fonctionnalité.</div>
+        <div class="ax-en">Ownership.</div>
+        <div class="ax-fr">Tout réside sur votre serveur, dans votre base. La propriété de la donnée précède la fonctionnalité.</div>
       </div>
       <div class="ax">
         <div class="ax-num">— 02</div>
         <div class="ax-en">Readability.</div>
-        <div class="ax-fr">Le format reste lisible sans le logiciel d'origine. Formats ouverts uniquement.</div>
+        <div class="ax-fr">Les données restent lisibles sans le logiciel d'origine : base SQL standard, exports ouverts, aucun format captif.</div>
       </div>
       <div class="ax">
         <div class="ax-num">— 03</div>
         <div class="ax-en">Persistence.</div>
-        <div class="ax-fr">Rien n'est jamais supprimé. L'oubli est intentionnel — ou n'est pas.</div>
+        <div class="ax-fr">Rien ne disparaît par accident. Chaque suppression est un choix, et laisse une trace.</div>
       </div>
       <div class="ax">
         <div class="ax-num">— 04</div>
         <div class="ax-en">Traceability.</div>
-        <div class="ax-fr">Chaque entrée porte un code, une date, et des relations vérifiables.</div>
+        <div class="ax-fr">Chaque entrée porte un identifiant, une date, un auteur et des relations vérifiables.</div>
       </div>
     </div>
   </div>
@@ -3054,10 +3057,11 @@ if (document.readyState === 'loading') {
           <div class="case-h">Un studio entier, <span class="v">un seul système.</span></div>
           <p class="case-desc">La plupart des studios jonglent avec <strong>quinze SaaS</strong> qui ne se parlent pas — Asana, Notion, Toggl, Drive, Slack, Sellsy, Yamdu, Frame.io, WeTransfer. Quinze logins, quinze factures, aucune donnée qui circule.</p>
           <p class="case-desc">Nous avons fait l'inverse : <strong>un seul système</strong> où les contacts dialoguent avec les projets, les factures avec le temps tracké, l'audio review avec les versions livrées. Une seule URL, une seule base de données, des permissions fines.</p>
+          <p class="case-desc">Les clients y ont leur propre portail : suivi des projets, validation des mixages, documents et factures. Et une recherche instantanée retrouve n'importe quel contact, projet ou document en quelques frappes.</p>
           <div class="case-stats-strip">
             <div class="css-cell"><span class="css-num">15 → 1</span><span class="css-lbl">SaaS remplacés</span></div>
-            <div class="css-cell"><span class="css-num">163</span><span class="css-lbl">Tables reliées</span></div>
-            <div class="css-cell"><span class="css-num">38</span><span class="css-lbl">Modules métier</span></div>
+            <div class="css-cell"><span class="css-num">480+</span><span class="css-lbl">Tables reliées</span></div>
+            <div class="css-cell"><span class="css-num">45+</span><span class="css-lbl">Modules métier</span></div>
             <div class="css-cell"><span class="css-num">15 €</span><span class="css-lbl">Coût mensuel · VPS</span></div>
           </div>
 
@@ -3079,30 +3083,30 @@ if (document.readyState === 'loading') {
           <div class="mockup-body">
             <aside class="mb-side">
               <div class="mb-side-title">Modules</div>
+              <div class="mb-mod"><span>Dashboard</span><span class="mb-mod-dot"></span></div>
+              <div class="mb-mod active"><span>Projets</span><span class="mb-mod-dot"></span></div>
+              <div class="mb-mod"><span>Tâches</span><span class="mb-mod-dot"></span></div>
               <div class="mb-mod"><span>CRM</span><span class="mb-mod-dot"></span></div>
-              <div class="mb-mod"><span>Facturation</span><span class="mb-mod-dot"></span></div>
-              <div class="mb-mod"><span>Contrats</span><span class="mb-mod-dot"></span></div>
-              <div class="mb-mod active"><span>Production</span><span class="mb-mod-dot"></span></div>
-              <div class="mb-mod"><span>SOPs</span><span class="mb-mod-dot"></span></div>
-              <div class="mb-mod"><span>KPIs &amp; Logs</span><span class="mb-mod-dot"></span></div>
-              <div class="mb-mod"><span>Archives</span><span class="mb-mod-dot"></span></div>
+              <div class="mb-mod"><span>Agenda</span><span class="mb-mod-dot"></span></div>
+              <div class="mb-mod"><span>AlexTime</span><span class="mb-mod-dot"></span></div>
+              <div class="mb-mod"><span>Finances</span><span class="mb-mod-dot"></span></div>
             </aside>
             <main class="mb-main">
               <div class="mb-crumb">
-                <span>Production</span><span class="sep">/</span><span>Films</span><span class="sep">/</span><span class="now">Banana Océan</span>
+                <span>Projets</span><span class="sep">/</span><span>Réalisation</span><span class="sep">/</span><span class="now">Banana Océan</span>
               </div>
               <div class="mb-prj-head">
                 <div>
                   <div class="mb-prj-name">Banana Océan</div>
-                  <div class="mb-prj-meta">Court-métrage · 2024 — Réf. ALEX//E1-125</div>
+                  <div class="mb-prj-meta">Court-métrage · 2024 — Pôle Réalisation</div>
                 </div>
                 <div class="mb-pill"><span class="live-dot"></span>En cours</div>
               </div>
               <div class="mb-tabs">
-                <span class="mb-tab active">Vue d'ensemble</span>
-                <span class="mb-tab">Découpage</span>
-                <span class="mb-tab">Budget</span>
-                <span class="mb-tab">Fichiers</span>
+                <span class="mb-tab active">Résumé</span>
+                <span class="mb-tab">Timeline</span>
+                <span class="mb-tab">Documents</span>
+                <span class="mb-tab">Équipe</span>
               </div>
               <div class="mb-grid">
                 <div class="mb-card">
@@ -3116,15 +3120,15 @@ if (document.readyState === 'loading') {
               </div>
               <div class="mb-files">
                 <div class="mb-file-row">
-                  <span class="code">ALEX//E1-125-K-C-PHOFS</span>
+                  <span class="code">Contrat de réalisation · signé</span>
                   <span class="tag">Contrat</span>
                 </div>
                 <div class="mb-file-row">
-                  <span class="code">ALEX//E1-125-V-C-PHOFS</span>
+                  <span class="code">Facture QR · acompte 30 %</span>
                   <span class="tag">Facture</span>
                 </div>
                 <div class="mb-file-row">
-                  <span class="code">ALEX//E1-125-J-E1_125_ASOT</span>
+                  <span class="code">Découpage technique · v3</span>
                   <span class="tag">Découpage</span>
                 </div>
               </div>
@@ -3136,42 +3140,62 @@ if (document.readyState === 'loading') {
       <div class="poles">
         <div class="pole">
           <div class="pole-tag">— Pôle 01</div>
-          <div class="pole-name">Films.</div>
-          <div class="pole-desc">Production, post-production, distribution.</div>
+          <div class="pole-name">Réalisation.</div>
+          <div class="pole-desc">Écriture, tournage, montage, étalonnage, mix.</div>
         </div>
         <div class="pole">
           <div class="pole-tag">— Pôle 02</div>
-          <div class="pole-name">Musique.</div>
-          <div class="pole-desc">Composition, enregistrement, mixage.</div>
+          <div class="pole-name">Records.</div>
+          <div class="pole-desc">Arrangement, enregistrement, mixage, mastering.</div>
         </div>
         <div class="pole">
           <div class="pole-tag">— Pôle 03</div>
           <div class="pole-name">Photographie.</div>
-          <div class="pole-desc">Direction artistique, prise de vue, traitement.</div>
+          <div class="pole-desc">Shooting, retouche, sélection, livraison.</div>
         </div>
         <div class="pole">
           <div class="pole-tag">— Pôle 04</div>
-          <div class="pole-name">Podcasts.</div>
-          <div class="pole-desc">Production, montage, diffusion.</div>
+          <div class="pole-name">FM / Podcast.</div>
+          <div class="pole-desc">Préparation, enregistrement, montage, publication.</div>
+        </div>
+        <div class="pole">
+          <div class="pole-tag">— Pôle 05</div>
+          <div class="pole-name">Éditions.</div>
+          <div class="pole-desc">Rédaction, relecture, mise en page, impression.</div>
+        </div>
+        <div class="pole">
+          <div class="pole-tag">— Pôle 06</div>
+          <div class="pole-name">Communication.</div>
+          <div class="pole-desc">Brief, conception, production, diffusion.</div>
+        </div>
+        <div class="pole">
+          <div class="pole-tag">— Pôle 07</div>
+          <div class="pole-name">Tech &amp; Rentals.</div>
+          <div class="pole-desc">Parc matériel, kits, sorties et retours.</div>
+        </div>
+        <div class="pole">
+          <div class="pole-tag">— Pôle 08</div>
+          <div class="pole-name">Spectacle.</div>
+          <div class="pole-desc">Financement, résidence, création, diffusion.</div>
         </div>
       </div>
 
       <div class="studio-stats">
         <div>
-          <div class="ss-num">4</div>
-          <div class="ss-label">Pôles d'activité<br>un seul vault</div>
+          <div class="ss-num">8</div>
+          <div class="ss-label">Pôles d'activité<br>une seule base</div>
         </div>
         <div>
           <div class="ss-num">1</div>
           <div class="ss-label">Environnement unifié<br>une vue, toutes les données</div>
         </div>
         <div>
-          <div class="ss-num">.md</div>
-          <div class="ss-label">Format universel<br>lisible sans logiciel</div>
+          <div class="ss-num">SQL</div>
+          <div class="ss-label">Base standard<br>exportable en une commande</div>
         </div>
         <div>
-          <div class="ss-num">30<span style="font-size:.5em;color:var(--ink-faint);font-weight:500">ans+</span></div>
-          <div class="ss-label">Durée de lecture estimée<br>archives en 2056</div>
+          <div class="ss-num">24<span style="font-size:.5em;color:var(--ink-faint);font-weight:500">/7</span></div>
+          <div class="ss-label">Portail client<br>projets, mixages, factures</div>
         </div>
       </div>
     </div>
