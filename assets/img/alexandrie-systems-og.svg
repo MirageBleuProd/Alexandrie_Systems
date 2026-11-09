@@ -4,7 +4,7 @@
   <desc>Image de partage social (1200×630) — Des systèmes pour les organisations qui refusent la dispersion.</desc>
   <defs>
     <style type="text/css"><![CDATA[
-      @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&amp;family=Instrument+Serif:ital@1&amp;family=JetBrains+Mono:wght@500&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@500&display=swap');
       .h1{font-family:'Bricolage Grotesque','Inter',sans-serif;font-weight:600;letter-spacing:-2px;fill:#0a0a0a}
       .h1-em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;fill:#7326BB}
       .word{font-family:'Bricolage Grotesque','Inter',sans-serif;font-weight:700;letter-spacing:-1.8px;fill:#0a0a0a}
@@ -41,5 +41,5 @@
   <text x="80" y="566" font-size="14" class="mono">ARCHITECTURE  ·  CONSEIL  ·  TRANSITION IA</text>
 
   <!-- Bottom-right : URL canonique -->
-  <text x="1120" y="566" text-anchor="end" font-size="14" class="mono">backoffice.miragebleu.ch/alex</text>
+  <text x="1120" y="566" text-anchor="end" font-size="14" class="mono">alexandrie.systems</text>
 </svg>

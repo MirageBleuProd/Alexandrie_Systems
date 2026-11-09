@@ -1,0 +1,5 @@
+# GitHub Pages (Jekyll) — fichiers du dépôt à ne pas publier sur le site.
+# Sans cette liste, README.md et DESIGN_SYSTEM.md seraient servis comme pages publiques.
+exclude:
+  - README.md
+  - DESIGN_SYSTEM.md

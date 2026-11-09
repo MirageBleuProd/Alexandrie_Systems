@@ -4,7 +4,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://alexandrie.systems/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://alexandrie.systems/"/>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://alexandrie.systems/blog/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://alexandrie.systems/blog/"/>

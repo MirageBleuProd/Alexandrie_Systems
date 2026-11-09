@@ -10,7 +10,7 @@
 
 ### 1.1 Positioning
 
-**Alexandrie Systems** est un studio suisse (Neuchâtel) qui conçoit des **Backoffices propriétaires sur mesure** pour PME (10-150 personnes). Le positionnement n'est pas "agence digitale" ni "consultant SaaS" — c'est **architecte de systèmes d'information à transmettre**.
+**Alexandrie Systems** est un studio suisse (Neuchâtel) qui conçoit des **Backoffices propriétaires sur mesure** pour PME suisses (5 à 80 collaborateurs). Le positionnement n'est pas "agence digitale" ni "consultant SaaS" — c'est **architecte de systèmes d'information à transmettre**.
 
 Tagline officielle : **« Un spécialiste se reconnaît à son système, pas à sa taille. »**
 
@@ -42,7 +42,7 @@ Sous-titre : **« Nous concevons des systèmes pour les organisations qui refuse
 
 ### 1.3 Cible lecteur
 
-Dirigeant ou bras droit d'une PME suisse (10-150 personnes), 40-55 ans, technique mais pas dev. Déjà échaudé par 1-2 outils SaaS. Méfiant des promesses. Cherche à comprendre AVANT d'acheter.
+Dirigeant ou bras droit d'une PME suisse (5 à 80 collaborateurs), 40-55 ans, technique mais pas dev. Déjà échaudé par 1-2 outils SaaS. Méfiant des promesses. Cherche à comprendre AVANT d'acheter.
 
 ---
 
@@ -339,6 +339,8 @@ color: var(--violet);
 ```
 
 ### 4.6 Footer minimal
+
+Toujours sur fond sombre (`--ink`) : le logo Mirage Bleu (`logo.svg`) est blanc/bleu clair et devient illisible sur fond `--bone`.
 
 ```html
 <footer class="footer">
