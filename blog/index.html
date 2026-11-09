@@ -19,10 +19,11 @@
 
 <link rel="canonical" href="https://alexandrie.systems/blog/">
 <link rel="alternate" hreflang="fr" href="https://alexandrie.systems/blog/">
-<link rel="alternate" hreflang="fr-CH" href="https://alexandrie.systems/blog/">
+<link rel="alternate" hreflang="x-default" href="https://alexandrie.systems/blog/">
 
+<link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" type="image/svg+xml" href="/assets/img/alexandrie-systems-mark.svg">
-<link rel="apple-touch-icon" href="/assets/img/alexandrie-systems-mark.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Alexandrie Systems">
@@ -65,9 +66,8 @@
 }
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/fonts.css">
 
 <style>
 :root{
@@ -194,9 +194,10 @@ h1 .v{color:var(--violet)}
 .post-arrow:hover{text-decoration:none}
 
 .posts-h--next{margin-top:72px}
-.post-coming{opacity:.55;cursor:default}
+.post-coming{cursor:default}
 .post-coming:hover{transform:none}
-.post-coming .post-title{color:var(--ink-muted)}
+.post-coming .post-title{color:var(--ink-soft)}
+.post-coming .post-excerpt{color:var(--ink-muted)}
 .post-coming .post-meta .dot{background:var(--ink-muted)}
 
 @media (max-width:780px){
@@ -294,7 +295,7 @@ h1 .v{color:var(--violet)}
   <div class="footer-inner">
     <div>© MMXXVI · Alexandrie Systems</div>
     <a href="https://miragebleu.ch" target="_blank" rel="noopener" class="mb-footer-link">
-      <span style="opacity:.6;margin-right:10px">Marque de</span>
+      <span style="margin-right:10px">Marque de</span>
       <img src="/assets/img/logo.svg" alt="Mirage Bleu" style="height:18px;width:auto;vertical-align:middle" />
     </a>
   </div>

@@ -8,20 +8,25 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://alexandrie.systems/"/>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://alexandrie.systems/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandrie.systems/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandrie.systems/"/>
     <image:image>
       <image:loc>https://alexandrie.systems/assets/img/alexandrie-systems-og.png</image:loc>
       <image:title>Alexandrie Systems — Architecture · Conseil · Transition IA</image:title>
       <image:caption>Des systèmes pour les organisations qui refusent la dispersion.</image:caption>
     </image:image>
+  </url>
+  <url>
+    <loc>https://alexandrie.systems/en/</loc>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alexandrie.systems/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandrie.systems/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandrie.systems/"/>
     <image:image>
-      <image:loc>https://alexandrie.systems/assets/img/alexandrie-systems-logo.svg</image:loc>
-      <image:title>Logo Alexandrie Systems</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://alexandrie.systems/assets/img/alexandrie-systems-mark.svg</image:loc>
-      <image:title>Mark Alexandrie Systems</image:title>
+      <image:loc>https://alexandrie.systems/assets/img/alexandrie-systems-og-en.png</image:loc>
+      <image:title>Alexandrie Systems — Custom back-office systems for Swiss SMEs</image:title>
     </image:image>
   </url>
   <url>
@@ -30,7 +35,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://alexandrie.systems/blog/"/>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://alexandrie.systems/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandrie.systems/blog/"/>
   </url>
   <url>
@@ -39,7 +43,6 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://alexandrie.systems/blog/backoffice-sur-mesure-vs-saas-7-criteres"/>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://alexandrie.systems/blog/backoffice-sur-mesure-vs-saas-7-criteres"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandrie.systems/blog/backoffice-sur-mesure-vs-saas-7-criteres"/>
   </url>
 </urlset>

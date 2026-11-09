@@ -86,17 +86,16 @@ Dirigeant ou bras droit d'une PME suisse (5 à 80 collaborateurs), 40-55 ans, te
 
 ### 2.2 Typographie
 
-**Fonts utilisées** (loadées depuis Google Fonts) :
+**Fonts utilisées** (auto-hébergées dans `/assets/fonts/`, jamais Google Fonts : pas d'IP visiteur envoyée à un tiers) :
 
 ```html
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif&display=swap">
+<link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">   <!-- ou /assets/css/fonts.css pour une page à CSS propre -->
 ```
 
 | Rôle | Family | Weights | Usage |
 |------|--------|---------|-------|
-| Display + body | **Bricolage Grotesque** | 400, 500, 600, 700, 800 | Tout sauf cas particuliers |
+| Display + body | **Bricolage Grotesque** | 400 à 700 (variable) | Tout sauf cas particuliers |
 | Mono / metadata | **JetBrains Mono** | 400, 500 | Kickers, eyebrows, dates, breadcrumbs, code |
 | Italique éditorial | **Instrument Serif** | 400 (italic) | Timer h2 + emphasis rares |
 
@@ -568,14 +567,14 @@ CTA discret vers /#interventions ou /#contact
 
 | Lib | Version | Usage | CDN |
 |-----|---------|-------|-----|
-| Bricolage Grotesque | latest | Display font | Google Fonts |
-| JetBrains Mono | latest | Mono font | Google Fonts |
-| Instrument Serif | latest | Italique rare | Google Fonts |
+| Bricolage Grotesque | variable (opsz, wght) | Display font | auto-hébergée `/assets/fonts/` |
+| JetBrains Mono | variable (wght) | Mono font | auto-hébergée `/assets/fonts/` |
+| Instrument Serif | regular + italic | Italique rare | auto-hébergée `/assets/fonts/` |
 
 ### 11.3 Performance defaults
 
 - Aucun script externe (une quinzaine de lignes de JS inline)
-- Google Fonts en `preconnect` + `display=swap`
+- Polices auto-hébergées (woff2, `font-display: swap`, preload de Bricolage latin), aucune requête tierce
 - Pas de framework JS (vanilla)
 - CSS inline pour FCP (landing ~35 Ko)
 

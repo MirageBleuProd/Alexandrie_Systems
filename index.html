@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Alexandrie Systems — Architecture · Conseil · Transition IA</title>
-<meta name="description" content="Systèmes sur mesure pour les PME suisses : un seul outil à la place de dix abonnements, qui vous appartient entièrement. Audit, conception, déploiement et transmission.">
+<title>Backoffice sur mesure pour PME suisses — Alexandrie Systems</title>
+<meta name="description" content="Backoffices sur mesure pour les PME suisses : un seul outil à la place de dix abonnements, qui vous appartient entièrement. Audit, conception, déploiement.">
 <meta name="author" content="Alexandrie Systems">
 <meta name="theme-color" content="#f4f0e8">
 <meta name="color-scheme" content="light">
@@ -13,17 +13,20 @@
 <link type="text/plain" rel="author" href="/humans.txt">
 
 <link rel="canonical" href="https://alexandrie.systems/">
-<link rel="alternate" hreflang="fr-CH" href="https://alexandrie.systems/">
+<link rel="alternate" hreflang="fr" href="https://alexandrie.systems/">
+<link rel="alternate" hreflang="en" href="https://alexandrie.systems/en/">
 <link rel="alternate" hreflang="x-default" href="https://alexandrie.systems/">
 
+<link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" type="image/svg+xml" href="/assets/img/alexandrie-systems-mark.svg">
-<link rel="apple-touch-icon" href="/assets/img/alexandrie-systems-mark.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Alexandrie Systems">
 <meta property="og:locale" content="fr_CH">
-<meta property="og:title" content="Alexandrie Systems — Architecture · Conseil · Transition IA">
-<meta property="og:description" content="Systèmes sur mesure pour les PME suisses : un seul outil à la place de dix abonnements, qui vous appartient entièrement.">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:title" content="Backoffice sur mesure pour PME suisses — Alexandrie Systems">
+<meta property="og:description" content="Backoffices sur mesure pour les PME suisses : un seul outil à la place de dix abonnements, qui vous appartient entièrement.">
 <meta property="og:url" content="https://alexandrie.systems/">
 <meta property="og:image" content="https://alexandrie.systems/assets/img/alexandrie-systems-og.png?v=2">
 <meta property="og:image:type" content="image/png">
@@ -31,8 +34,8 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Alexandrie Systems — Des systèmes pour les organisations qui refusent la dispersion.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Alexandrie Systems — Architecture · Conseil · Transition IA">
-<meta name="twitter:description" content="Systèmes sur mesure pour les PME suisses : un seul outil à la place de dix abonnements, qui vous appartient entièrement.">
+<meta name="twitter:title" content="Backoffice sur mesure pour PME suisses — Alexandrie Systems">
+<meta name="twitter:description" content="Backoffices sur mesure pour les PME suisses : un seul outil à la place de dix abonnements, qui vous appartient entièrement.">
 <meta name="twitter:image" content="https://alexandrie.systems/assets/img/alexandrie-systems-og.png?v=2">
 
 <script type="application/ld+json">
@@ -43,7 +46,7 @@
       "@type": ["Organization", "ProfessionalService"],
       "@id": "https://alexandrie.systems/#organization",
       "name": "Alexandrie Systems",
-      "description": "Systèmes sur mesure pour les PME suisses : audit, conception, déploiement et transmission d'un Backoffice propriétaire, sans abonnement ni dépendance.",
+      "description": "Backoffices sur mesure pour les PME suisses : audit, conception, déploiement et transmission d'un système propriétaire, sans abonnement ni dépendance.",
       "url": "https://alexandrie.systems/",
       "logo": "https://alexandrie.systems/assets/img/alexandrie-systems-mark.svg",
       "image": "https://alexandrie.systems/assets/img/alexandrie-systems-og.png",
@@ -71,6 +74,15 @@
       "url": "https://alexandrie.systems/",
       "name": "Alexandrie Systems",
       "publisher": { "@id": "https://alexandrie.systems/#organization" },
+      "inLanguage": ["fr-CH", "en"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://alexandrie.systems/#webpage",
+      "url": "https://alexandrie.systems/",
+      "name": "Backoffice sur mesure pour PME suisses — Alexandrie Systems",
+      "isPartOf": { "@id": "https://alexandrie.systems/#website" },
+      "about": { "@id": "https://alexandrie.systems/#organization" },
       "inLanguage": "fr-CH"
     },
     {
@@ -113,316 +125,13 @@
 }
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
 <script>document.documentElement.classList.add('js');</script>
-<style>
-:root{
-  --bone:#f4f0e8;
-  --bone-deep:#ebe5d8;
-  --ink:#0a0a0a;
-  --ink-soft:#3a3a3a;
-  --ink-faint:#7a7a78;
-  --ink-muted:#6a6a6a;
-  --rule:rgba(10,10,10,.12);
-  --violet:#7326BB;
-  --violet-light:#a672e0;
-  --ease:cubic-bezier(.16,1,.3,1);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  background:var(--bone);color:var(--ink);
-  font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:16px;line-height:1.5;
-  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
-  overflow-x:hidden;
-}
-::selection{background:var(--violet);color:var(--bone)}
-a:focus-visible,summary:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(115,38,187,.35);border-radius:8px}
-
-/* ===== Nav ===== */
-.nav{
-  position:fixed;top:0;left:0;right:0;z-index:50;
-  border-bottom:1px solid transparent;
-  transition:background .35s ease, border-bottom-color .35s ease;
-}
-.nav.is-scrolled{
-  background:rgba(244,240,232,.88);
-  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
-  border-bottom-color:rgba(10,10,10,.08);
-}
-.nav-inner{
-  max-width:1320px;margin:0 auto;padding:24px 32px;
-  display:flex;align-items:center;justify-content:space-between;gap:36px;
-  transition:padding .25s ease;
-}
-.nav.is-scrolled .nav-inner{padding:14px 32px}
-.brand{
-  display:flex;align-items:center;gap:10px;
-  font-weight:700;font-size:21px;letter-spacing:-.03em;color:var(--ink);text-decoration:none;
-}
-.brand-letter-wrap{display:inline-block;width:.48em;height:.72em;position:relative;margin-right:.02em}
-.brand-letter{position:absolute;bottom:-.02em;left:0;height:1em;width:auto;color:var(--ink)}
-.nav-links{display:flex;gap:40px;align-items:center}
-.nav-links a{font-size:14.5px;font-weight:500;color:var(--ink-soft);text-decoration:none;letter-spacing:-.01em;transition:color .15s}
-.nav-links a:hover{color:var(--violet)}
-.nav-cta{
-  font-size:13.5px;font-weight:600;padding:11px 20px;border-radius:100px;
-  background:var(--violet);color:var(--bone);text-decoration:none;white-space:nowrap;
-  transition:background .2s;
-}
-.nav-cta:hover{background:var(--ink)}
-@media (max-width:780px){.nav-links{display:none}}
-
-/* ===== Boutons ===== */
-.btn{
-  font-size:14px;font-weight:600;padding:16px 28px;border-radius:100px;
-  display:inline-flex;align-items:center;gap:8px;text-decoration:none;
-  border:1px solid transparent;transition:background .22s var(--ease), color .22s var(--ease), border-color .22s var(--ease);
-}
-.btn:active{transform:scale(.97)}
-.btn .arr{display:inline-block;transition:transform .4s var(--ease)}
-.btn:hover .arr{transform:translateX(4px)}
-.btn-violet{background:var(--violet);color:var(--bone)}
-.btn-violet:hover{background:var(--ink)}
-.btn-ghost{color:var(--ink);border-color:var(--ink)}
-.btn-ghost:hover{background:var(--ink);color:var(--bone)}
-
-/* ===== Hero ===== */
-.hero{padding:190px 32px 130px}
-.hero-inner{max-width:1320px;margin:0 auto}
-.eyebrow{
-  font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;
-  letter-spacing:.16em;text-transform:uppercase;color:var(--violet);margin-bottom:36px;
-}
-.hero h1{
-  font-weight:700;font-size:clamp(64px,13vw,190px);line-height:.86;letter-spacing:-.045em;
-  margin-bottom:48px;
-}
-.hero h1 span{display:block}
-.hero h1 .v{color:var(--violet)}
-.hero-deck{font-size:clamp(18px,2vw,22px);line-height:1.45;color:var(--ink-soft);max-width:580px;margin-bottom:44px}
-.hero-deck strong{color:var(--ink);font-weight:600}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-
-/* ===== Sections ===== */
-.section{padding:120px 32px}
-.inner{max-width:1320px;margin:0 auto}
-.kicker{
-  font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;
-  letter-spacing:.16em;text-transform:uppercase;color:var(--violet);margin-bottom:16px;
-}
-.section-h{
-  font-weight:600;font-size:clamp(38px,5.5vw,76px);line-height:.94;letter-spacing:-.04em;
-  max-width:900px;margin-bottom:64px;
-}
-.section-h .v{color:var(--violet)}
-.section-h .it{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--violet)}
-
-/* ===== Interventions ===== */
-.interv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-@media (max-width:1100px){.interv-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:640px){.interv-grid{grid-template-columns:1fr}}
-.interv-card{
-  background:var(--bone-deep);border:1px solid transparent;border-radius:20px;
-  padding:28px 24px 24px;display:flex;flex-direction:column;gap:10px;
-  transition:border-color .3s var(--ease), transform .35s var(--ease);
-}
-.interv-card:hover{border-color:rgba(115,38,187,.45);transform:translateY(-3px)}
-.ic-num{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.16em;color:var(--violet)}
-.ic-name{font-weight:600;font-size:26px;line-height:1.05;letter-spacing:-.025em}
-.ic-desc{font-size:15px;line-height:1.55;color:var(--ink-soft)}
-.ic-meta{
-  margin-top:auto;padding-top:16px;border-top:1px solid var(--rule);
-  font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;
-  letter-spacing:.12em;text-transform:uppercase;color:var(--violet);
-}
-.audience-line{margin-top:44px;font-size:18px;line-height:1.55;color:var(--ink-soft);max-width:780px}
-.audience-line strong{color:var(--ink);font-weight:600}
-
-/* ===== Étude de cas ===== */
-.case{padding-top:40px}
-.case-frame{background:var(--bone-deep);border-radius:32px;padding:72px 56px}
-.case-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:72px;align-items:center}
-@media (max-width:880px){.case-grid{grid-template-columns:1fr;gap:40px}}
-.case-tag{
-  display:inline-block;padding:6px 14px;border-radius:100px;margin-bottom:28px;
-  background:var(--violet);color:var(--bone);
-  font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
-}
-.case-desc{font-size:17px;line-height:1.55;color:var(--ink-soft);max-width:560px;margin-bottom:14px}
-.case-desc strong{color:var(--ink);font-weight:600}
-.case-stats{
-  display:grid;grid-template-columns:repeat(4,1fr);margin-top:32px;padding-top:22px;
-  border-top:1px solid var(--ink);max-width:560px;
-}
-@media (max-width:560px){.case-stats{grid-template-columns:repeat(2,1fr);gap:18px 0}}
-.cs-cell{display:flex;flex-direction:column;gap:6px;padding-right:16px}
-.cs-num{font-weight:700;font-size:24px;line-height:1;letter-spacing:-.025em;font-variant-numeric:tabular-nums}
-.cs-lbl{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);line-height:1.3}
-.case-quote{margin-top:56px;padding-top:36px;border-top:1px solid var(--rule);display:flex;gap:20px;align-items:flex-start;max-width:900px}
-.case-quote blockquote{font-weight:500;font-size:clamp(20px,2.2vw,26px);line-height:1.35;letter-spacing:-.02em}
-.case-quote blockquote .v{color:var(--violet)}
-.case-quote cite{display:block;margin-top:14px;font-style:normal;font-size:14px;color:var(--ink-muted)}
-.case-quote cite strong{color:var(--ink);font-weight:600}
-.avatar{
-  flex:none;width:44px;height:44px;border-radius:50%;
-  background:var(--violet-light);color:var(--bone);
-  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;
-}
-
-/* Maquette du Backoffice */
-.mockup{
-  background:#0a0e1a;border-radius:10px;overflow:hidden;color:#e4e7ed;
-  box-shadow:0 24px 60px rgba(10,10,10,.22), 0 4px 12px rgba(10,10,10,.08);
-}
-.mockup-bar{display:flex;align-items:center;gap:14px;background:#0e1320;padding:11px 16px;border-bottom:1px solid #1a1f30}
-.mb-dots{display:flex;gap:6px}
-.mb-dot{width:9px;height:9px;border-radius:50%}
-.mb-dot:nth-child(1){background:#ff5f57}.mb-dot:nth-child(2){background:#ffbd2e}.mb-dot:nth-child(3){background:#28ca42}
-.mb-brand{display:flex;align-items:center;gap:8px;margin-left:8px;font-weight:700;font-size:13px}
-.mb-brand img{height:14px;width:auto;display:block}
-.mb-brand span{color:#5a6478;font-weight:400}
-.mb-url{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:10px;color:#5a6478}
-.mockup-body{display:grid;grid-template-columns:150px 1fr;min-height:330px}
-.mb-side{border-right:1px solid #1a1f30;padding:14px 0}
-.mb-side-title{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#5a6478;padding:0 14px 10px}
-.mb-mod{padding:7px 14px;color:#a0a8b8;font-size:11.5px;font-weight:500;border-left:2px solid transparent}
-.mb-mod.active{background:rgba(115,38,187,.15);color:#fff;border-left-color:var(--violet)}
-.mb-main{padding:18px 22px;color:#c8cdd8}
-.mb-crumb{font-family:'JetBrains Mono',monospace;font-size:10px;color:#5a6478;margin-bottom:14px}
-.mb-crumb .now{color:var(--violet)}
-.mb-prj-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap;margin-bottom:18px}
-.mb-prj-name{font-weight:700;font-size:20px;color:#fff;letter-spacing:-.015em;margin-bottom:4px}
-.mb-prj-meta{font-size:10.5px;color:#7a8294}
-.mb-pill{
-  display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:100px;
-  background:rgba(115,38,187,.18);color:#c9a4f0;
-  font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
-}
-.mb-pill::before{content:'';width:5px;height:5px;border-radius:50%;background:#c9a4f0}
-.mb-tabs{display:flex;gap:18px;font-size:11px;border-bottom:1px solid #1a1f30;margin-bottom:14px}
-.mb-tab{padding:6px 0;color:#7a8294;font-weight:500;border-bottom:1px solid transparent}
-.mb-tab.active{color:#fff;border-bottom-color:var(--violet)}
-.mb-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
-.mb-card{background:#0e1320;border:1px solid #1a1f30;padding:11px 13px;border-radius:5px}
-.mb-card-lbl{font-family:'JetBrains Mono',monospace;font-size:9px;color:#5a6478;letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px}
-.mb-card-val{font-weight:600;font-size:14px;color:#fff}
-.mb-card-val span{color:var(--violet)}
-.mb-row{
-  display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:4px;
-  padding:7px 10px;background:#0e1320;border-radius:4px;
-  font-family:'JetBrains Mono',monospace;font-size:10px;color:#7a8294;
-}
-.mb-row span:last-child{font-size:9px;padding:2px 7px;border-radius:100px;background:rgba(115,38,187,.18);color:#c9a4f0;letter-spacing:.06em;text-transform:uppercase}
-@media (max-width:540px){.mockup-body{grid-template-columns:1fr}.mb-side,.mb-url{display:none}}
-
-/* ===== Engagements ===== */
-.engage{background:var(--ink);color:var(--bone)}
-.engage .kicker{color:var(--violet-light)}
-.engage .section-h .v{color:var(--violet-light)}
-.eg-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(244,240,232,.15)}
-@media (max-width:1100px){.eg-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:640px){.eg-grid{grid-template-columns:1fr}}
-.eg{padding:36px 28px 36px 0;border-bottom:1px solid rgba(244,240,232,.15)}
-.eg-num{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--violet-light);margin-bottom:14px}
-.eg-title{font-weight:600;font-size:22px;line-height:1.15;letter-spacing:-.02em;margin-bottom:10px}
-.eg-desc{font-size:15px;line-height:1.55;opacity:.65;max-width:320px}
-
-/* ===== FAQ ===== */
-.faq-inner{max-width:1040px;margin:0 auto}
-.faq-list{border-bottom:1px solid var(--rule)}
-.faq-item{border-top:1px solid var(--rule)}
-.faq-item summary{
-  list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;
-  padding:26px 0;font-weight:600;font-size:clamp(19px,2vw,24px);line-height:1.25;letter-spacing:-.02em;
-  transition:color .2s;
-}
-.faq-item summary::-webkit-details-marker{display:none}
-.faq-item summary:hover{color:var(--violet)}
-.faq-plus{flex:none;position:relative;width:16px;height:16px}
-.faq-plus::before,.faq-plus::after{content:'';position:absolute;left:0;top:7px;width:16px;height:2px;background:var(--violet);transition:transform .3s var(--ease)}
-.faq-plus::after{transform:rotate(90deg)}
-.faq-item[open] .faq-plus::after{transform:rotate(0)}
-.faq-a{padding:0 40px 28px 0;font-size:16.5px;line-height:1.6;color:var(--ink-soft);max-width:720px}
-.faq-a strong{color:var(--ink);font-weight:600}
-.faq-read{margin-top:40px;font-size:15.5px;color:var(--ink-soft)}
-.faq-read a{color:var(--violet);font-weight:600;text-decoration:none}
-.faq-read a:hover{text-decoration:underline;text-underline-offset:3px}
-
-/* ===== Contact ===== */
-.contact{background:var(--ink);color:var(--bone);padding:140px 32px 110px}
-.contact-status{
-  display:inline-flex;align-items:center;gap:10px;margin-bottom:44px;padding:8px 16px;
-  border:1px solid var(--violet-light);border-radius:100px;color:var(--violet-light);
-  font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
-}
-.contact-status::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--violet-light);animation:pulse 2s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.contact h2{font-weight:600;font-size:clamp(44px,8vw,120px);line-height:.88;letter-spacing:-.045em;margin-bottom:56px}
-.contact h2 .v{color:var(--violet-light)}
-.contact-grid{display:grid;grid-template-columns:2fr 1fr;gap:64px;align-items:end}
-@media (max-width:780px){.contact-grid{grid-template-columns:1fr;gap:32px}}
-.contact-info{font-size:14px;line-height:1.7;opacity:.7}
-
-/* ===== Footer ===== */
-.footer{background:var(--ink);color:var(--bone);padding:48px 32px;border-top:1px solid rgba(244,240,232,.1)}
-.footer-inner{
-  max-width:1320px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;
-  font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(244,240,232,.5);
-}
-.footer a{color:rgba(244,240,232,.7);text-decoration:none;display:inline-flex;align-items:center;gap:10px}
-.footer a:hover{color:var(--bone)}
-.footer img{height:18px;width:auto}
-
-/* ===== Apparition au défilement (JS uniquement, rien de caché sans JS) ===== */
-.js [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease), transform .8s var(--ease)}
-.js [data-reveal].is-in{opacity:1;transform:none}
-@media (prefers-reduced-motion: reduce){
-  html{scroll-behavior:auto}
-  .js [data-reveal]{opacity:1;transform:none;transition:none}
-  .interv-card,.btn .arr,.faq-plus::before,.faq-plus::after{transition:none}
-  .contact-status::before{animation:none}
-}
-
-/* ===== Mobile ===== */
-@media (max-width:768px){
-  .nav-inner{padding:18px 20px;gap:12px}
-  .nav.is-scrolled .nav-inner{padding:12px 20px}
-  .brand{font-size:19px;gap:8px}
-  .nav-cta{font-size:12.5px;padding:9px 16px}
-  .hero{padding:124px 20px 80px}
-  .hero h1{margin-bottom:32px}
-  .eyebrow{margin-bottom:24px;font-size:10.5px}
-  .hero-deck{font-size:17px;margin-bottom:32px}
-  .btn{padding:14px 22px;font-size:13.5px}
-  .section{padding:80px 20px}
-  .section-h{margin-bottom:40px}
-  .case{padding-top:16px}
-  .case-frame{padding:36px 20px;border-radius:20px}
-  .case-desc{font-size:15.5px}
-  .case-quote{margin-top:40px;padding-top:28px}
-  .eg{padding:28px 0}
-  .faq-a{padding-right:0}
-  .contact{padding:96px 20px 72px}
-  .contact h2{margin-bottom:40px}
-  .footer{padding:32px 20px}
-  .footer-inner{flex-direction:column;justify-content:center;text-align:center;gap:14px;font-size:10px}
-}
-@media (max-width:480px){
-  .hero{padding:110px 18px 64px}
-  .hero h1{font-size:60px;line-height:.92;letter-spacing:-.035em}
-  .hero-actions{flex-direction:column}
-  .hero-actions .btn{justify-content:center}
-  .section{padding:72px 18px}
-  .contact{padding:88px 18px 64px}
-  .contact h2{font-size:40px}
-  .contact .btn{width:100%;justify-content:center}
-}
-</style>
 </head>
 <body>
+
+<a class="skip" href="#main">Aller au contenu</a>
 
 <nav class="nav" id="nav">
   <div class="nav-inner">
@@ -437,23 +146,26 @@ a:focus-visible,summary:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(115
       <a href="#faq">Questions</a>
       <a href="/blog/">Journal</a>
     </div>
-    <a href="#contact" class="nav-cta">Prendre rendez-vous</a>
+    <div class="nav-right">
+      <a href="/en/" class="nav-lang" hreflang="en" lang="en" aria-label="English version">EN</a>
+      <a href="#contact" class="nav-cta">Prendre rendez-vous</a>
+    </div>
   </div>
 </nav>
 
-<main>
+<main id="main">
 
 <!-- ===== Hero ===== -->
 <header class="hero">
   <div class="hero-inner">
-    <div class="eyebrow" data-reveal>Architecture de systèmes · Conseil · Transition IA</div>
-    <h1 data-reveal>
+    <div class="eyebrow">Architecture de systèmes · Conseil · Transition IA</div>
+    <h1>
       <span>Architecture,</span>
       <span>mémoire,</span>
       <span class="v">continuité.</span>
     </h1>
-    <p class="hero-deck" data-reveal>Nous concevons des systèmes sur mesure pour les PME suisses : <strong>un seul outil à la place de dix abonnements</strong>, qui vous appartient entièrement.</p>
-    <div class="hero-actions" data-reveal>
+    <p class="hero-deck">Nous concevons des <strong>Backoffices sur mesure</strong> pour les PME suisses : un seul outil à la place de dix abonnements, qui vous appartient entièrement.</p>
+    <div class="hero-actions">
       <a href="#contact" class="btn btn-violet">Prendre rendez-vous <span class="arr" aria-hidden="true">→</span></a>
       <a href="#exemple" class="btn btn-ghost">Voir un exemple</a>
     </div>
@@ -655,25 +367,6 @@ a:focus-visible,summary:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(115
   </div>
 </footer>
 
-<script>
-(function(){
-  var nav = document.getElementById('nav');
-  function onScroll(){ nav.classList.toggle('is-scrolled', window.scrollY > 24); }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
-  var items = document.querySelectorAll('[data-reveal]');
-  if (!('IntersectionObserver' in window)) {
-    items.forEach(function(el){ el.classList.add('is-in'); });
-    return;
-  }
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if (e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); }
-    });
-  }, { rootMargin: '0px 0px -8% 0px' });
-  items.forEach(function(el){ io.observe(el); });
-})();
-</script>
+<script src="/assets/js/site.js" defer></script>
 </body>
 </html>

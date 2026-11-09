@@ -15,7 +15,8 @@
   Last update: 2026-11-09
   Standards: HTML5, CSS3, ES5+, WAI-ARIA
   Components: HTML + CSS + Vanilla JS (zero build)
-  Fonts: Bricolage Grotesque, Instrument Serif, JetBrains Mono (Google Fonts)
+  Fonts: Bricolage Grotesque, Instrument Serif, JetBrains Mono (self-hosted, SIL OFL 1.1)
+  Languages: French, English
   Hosting: GitHub Pages
   Source: https://github.com/MirageBleuProd/Alexandrie_Systems
 

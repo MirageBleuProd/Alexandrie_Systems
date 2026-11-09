@@ -6,30 +6,33 @@ Site officiel — [alexandrie.systems](https://alexandrie.systems)
 
 ## Stack
 
-Site statique HTML + CSS + JS vanilla, zéro build, aucun script externe.
+Site statique HTML + CSS + JS vanilla, zéro build, aucune ressource tierce.
 
-- **Google Fonts** : Bricolage Grotesque, Instrument Serif, JetBrains Mono
+- **Polices auto-hébergées** dans `assets/fonts/` (Bricolage Grotesque, Instrument Serif, JetBrains Mono — SIL OFL 1.1, voir `OFL.txt`) : pas d'appel à Google Fonts, donc pas d'adresse IP des visiteurs transmise à Google
 - Animations : transitions CSS + apparition au défilement (`data-reveal`, IntersectionObserver)
 
 ## Structure
 
 ```
 .
-├── index.html                              Landing (HTML + CSS inline + ~15 lignes de JS)
-├── blog/
-│   ├── index.html                          Journal : liste des articles
-│   └── backoffice-sur-mesure-vs-saas-7-criteres.html
-├── assets/img/
-│   ├── alexandrie-systems-logo.svg         Logo standard (mark + wordmark, fond clair)
-│   ├── alexandrie-systems-logo-light.svg   Variante pour fond sombre
-│   ├── alexandrie-systems-mark.svg         Mark seul (favicon, app icon)
-│   ├── alexandrie-systems-og.svg           Image de partage 1200×630 (source)
-│   ├── alexandrie-systems-og.png           Image de partage rendue (à régénérer si le SVG change)
-│   └── logo.svg                            Logo Mirage Bleu (fond sombre uniquement)
+├── index.html                    Landing FR
+├── en/index.html                 Landing EN (même structure, textes adaptés)
+├── 404.html                      Page d'erreur bilingue (servie par GitHub Pages)
+├── blog/                         Journal (FR uniquement)
+├── assets/
+│   ├── css/site.css              Styles partagés FR / EN / 404 (polices incluses)
+│   ├── css/fonts.css             Polices seules, pour le blog (qui a son propre CSS inline)
+│   ├── js/site.js                Nav au défilement + apparition des blocs
+│   ├── fonts/                    Polices woff2 + licences
+│   └── img/                      Logos, images de partage FR et EN (SVG source + PNG rendu)
+├── favicon.ico · apple-touch-icon.png
 ├── robots.txt · sitemap.xml · humans.txt · CNAME
-├── _config.yml                             Exclut les docs internes de la publication
-└── DESIGN_SYSTEM.md                        Source de vérité design (non publiée)
+├── _config.yml                   Exclut les docs internes de la publication
+└── DESIGN_SYSTEM.md              Source de vérité design (non publiée)
 ```
+
+**Modifier un texte** : le changer dans `index.html` ET dans `en/index.html`. Les réponses de la FAQ
+sont aussi dans les données structurées (bloc JSON-LD en haut de chaque page) : garder les deux identiques.
 
 ## Sections de la landing
 
@@ -41,6 +44,8 @@ Version courte depuis la v1.1 (novembre 2026) : 6 sections, environ 9 écrans su
 4. **Engagements** — propriété, formats ouverts, traçabilité, pas d'abonnement
 5. **FAQ** — 5 questions en accordéon + lien vers l'article du Journal
 6. **Contact** — e-mail
+
+Version anglaise : `/en/`. Sélecteur FR / EN dans la barre de navigation, balises `hreflang` réciproques, déclarées aussi dans `sitemap.xml`.
 
 Retirés en v1.1 (récupérables dans l'historique git, commit `317486b`) : prologue animé, démo
 constellation, section Pour qui, axiomes en anglais, 8 pôles Mirage Bleu, manifeste, cartes Journal, GSAP.
