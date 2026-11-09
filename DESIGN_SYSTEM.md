@@ -324,15 +324,10 @@ color: var(--violet);
 ### 4.5 Section structure standard
 
 ```html
-<section class="[name]" id="[id]" data-motion="section">
-  <div class="[name]-inner">
-    <div class="section-head">
-      <div>
-        <div class="section-kicker" data-motion="float-y" data-distance="35">— [Nom section]</div>
-        <h2 class="section-h" data-motion="text">[Titre court] <span class="v">[partie violette].</span></h2>
-      </div>
-      <!-- Optional right-aligned action link -->
-    </div>
+<section class="section" id="[id]">
+  <div class="inner">
+    <div class="kicker">— [Nom section]</div>
+    <h2 class="section-h" data-reveal>[Titre court] <span class="v">[partie violette].</span></h2>
     <!-- Content -->
   </div>
 </section>
@@ -392,68 +387,25 @@ Toujours dans un `<div class="*-inner">` avec `max-width:1320px; margin:0 auto; 
 --ease-scroll: cubic-bezier(.6, 0, .4, 1);    /* indicateur scroll */
 ```
 
-GSAP equivalent : `expo.out` (durée 0.55-0.95s).
+### 6.2 Principe (depuis la v1.1, novembre 2026)
 
-### 6.2 Durées
+Sobriété : plus de prologue, de scroll-scrub, de pin ni de CTA magnétique. GSAP est retiré.
+Seules restent des transitions CSS courtes (hover 200-350 ms) et une apparition discrète au défilement.
 
-| Token | Valeur | Usage |
-|-------|--------|-------|
-| `dur-instant` | `120ms` | Hover état couleur |
-| `dur-quick` | `180-220ms` | Hover boutons/cards |
-| `dur-base` | `350-450ms` | Reveals |
-| `dur-slow` | `550-750ms` | Hero text reveal |
-| `dur-cinematic` | `950ms+` | Prologue cinematic |
-
-### 6.3 API data-motion (auto-wire)
-
-Le site utilise un système d'auto-wire via attributs HTML. Inclure dans tout nouveau composant.
+### 6.3 Apparition au défilement
 
 ```html
-<h2 data-motion="text">Titre révélé ligne-par-ligne au scroll</h2>
-<section data-motion="section">
-  <div data-reveal>...</div>     <!-- stagger fade-up -->
-  <div data-motion="float-y" data-distance="35">...</div>
-  <a data-motion="magnetic" data-strength="0.25">CTA cursor-follow</a>
-</section>
-<div data-motion="parallax" data-distance="60">...</div>
-<section data-motion="pin-reveal">...</section>
+<script>document.documentElement.classList.add('js');</script>  <!-- dans <head> -->
+<div data-reveal>...</div>
 ```
 
-**Respecter** `prefers-reduced-motion` : timeline gelée, ScrollTriggers désactivés.
-
-### 6.4 GSAP — pattern d'init
-
-```js
-<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script>
-function motionInit(){
-  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.defaults({ ease: 'expo.out', duration: 0.95 });
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  // ... auto-wire handlers
-}
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', motionInit);
-} else {
-  motionInit();
-}
-</script>
+```css
+.js [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease), transform .8s var(--ease)}
+.js [data-reveal].is-in{opacity:1;transform:none}
 ```
 
-### 6.5 SVG animation — pitfall
-
-Pour `scaleY` sur un `<polygon>` SVG : ne **PAS** utiliser CSS `transform-origin: 50% 95px` (pixel-based), GSAP bake une translation parasite. Utiliser `svgOrigin: 'x y'` (coords viewBox) à la place :
-
-```js
-// ❌ BUG : génère translateY(-95) parasite
-.prologue-mark { transform-origin: 50% 95px; transform: scaleY(0); }
-
-// ✅ OK : svgOrigin GSAP-native
-gsap.set(markL, { scaleY: 0, svgOrigin: '27.5 95' });
-gsap.to(markL,  { scaleY: 1, duration: .55 });
-```
+Un `IntersectionObserver` ajoute `.is-in`. Sans JS, rien n'est caché (la classe `js` n'est jamais posée).
+`prefers-reduced-motion: reduce` : tout est affiché d'emblée, sans transition.
 
 ---
 
@@ -510,7 +462,6 @@ Le système n'utilise quasi pas d'icônes (pas de feather/lucide). Privilégier 
 }
 ```
 
-Dans GSAP : `if (matchMedia('(prefers-reduced-motion: reduce)').matches) { killAnimations(); return; }`
 
 ---
 
@@ -617,18 +568,16 @@ CTA discret vers /#interventions ou /#contact
 
 | Lib | Version | Usage | CDN |
 |-----|---------|-------|-----|
-| GSAP | 3.12.5 | Motion + ScrollTrigger | `cdn.jsdelivr.net/npm/gsap@3.12.5` |
 | Bricolage Grotesque | latest | Display font | Google Fonts |
 | JetBrains Mono | latest | Mono font | Google Fonts |
 | Instrument Serif | latest | Italique rare | Google Fonts |
 
 ### 11.3 Performance defaults
 
-- GSAP en `defer` (non-bloquant)
-- IIFE motion-system wrappée dans `DOMContentLoaded`
+- Aucun script externe (une quinzaine de lignes de JS inline)
 - Google Fonts en `preconnect` + `display=swap`
 - Pas de framework JS (vanilla)
-- CSS inline pour FCP (HTML file ~130KB single-page)
+- CSS inline pour FCP (landing ~35 Ko)
 
 ---
 
@@ -640,7 +589,7 @@ Quand tu crées un nouveau composant ou une nouvelle page, vérifier :
 - [ ] Family Bricolage Grotesque ou JetBrains Mono (pas d'autre font)
 - [ ] Border-radius `100px` (pill) ou `14-24px` (cards)
 - [ ] Letter-spacing négatif sur les titres, positif sur les meta uppercase
-- [ ] `data-motion` attribute si l'élément doit s'animer (auto-wired)
+- [ ] `data-reveal` si l'élément doit apparaître au défilement (rien d'autre)
 - [ ] `prefers-reduced-motion` respecté (motion-safe par défaut)
 - [ ] Focus visible (outline violet)
 - [ ] Contraste AA minimum
